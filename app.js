@@ -1,20 +1,28 @@
-function fromDollarToYen (dollar) {
-    //1 dollar is 110 yen.
-    var dollar = dollar * 110;
-    return dollar;
+// this is my function that sums two numbers
+const sum = (a,b) => {
+    return a + b
+}
+
+// just a console log for ourselves.
+console.log(sum(7,3))
+
+const fromDollarToYen = function(dollars) {
+    var yens = dollars *110.05
+    return (yens);
 }
 
 
-function fromEuroToDollar (euro) {
-    //1 euro is 1.20 dollars.
-    var euro = euro * 1.2;
-    return (euro) ;
+const fromEuroToDollar = function(euros){
+    var dollars = euros *1.2
+    return (dollars);
 }
-console.log(fromEuroToDollar(3.5))
 
 
-function fromYanToPound (yan) {
-    //1 yan is 0,11 pounds.
-    var yan = yan * 0.11;
-    return yan;
+const fromYanToPound = function(yans){
+    var pound = yans * 0.11
+    return (pound);
 }
+
+// export the function to be used on other files 
+// (similar to the keyword `export` when using webpack)
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYanToPound};
